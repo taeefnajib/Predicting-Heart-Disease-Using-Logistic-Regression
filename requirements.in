@@ -1,0 +1,5 @@
+pandas
+numpy
+sklearn == 1.2.0
+dataclasses_json
+psycopg2-binary
