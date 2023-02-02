@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html >
+    <head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Predictor</title>
+    <link rel="stylesheet" href="../static/style.css">
+    </head>
+
+    <body>
+        <div class="container">  
+            <form id="contact" action="{{ url_for('predict')}}" method="post">
+            <h3>Heart Disease Predictor</h3>
+            <h4>Enter the following information</h4>
+            <h4 style="color: {{ color }}; font-weight: 700; text-align: left">
+                Prediction: {{ prediction_text }}
+            </h4>
+            <fieldset>
+                <label>Specify your gender</label><br>
+                <input type="radio" name="gender" value="1"> Male </input><br>
+                <input type="radio" name="gender" value="0"> Female </input><br>
+            </fieldset>
+            <fieldset>
+                <label>How old are you?</label><br>
+                <input name="age" type="text" tabindex="1" required>
+            </fieldset>
+            <fieldset>
+                <label>Are you a smoker?</label><br>
+                <input type="radio" name="currentSmoker" value="1"> Yes </input><br>
+                <input type="radio" name="currentSmoker" value="0"> No </input><br>
+            </fieldset>
+            <fieldset>
+                <label>How many ciggarrettes do you smoke per day?</label><br>
+                <input name="cigsPerDay" type="text" tabindex="1" required>
+            </fieldset>
+            <fieldset>
+                <label>Do you take any blood pressure medicine?</label><br>
+                <input type="radio" name="BPMeds" value="1"> Yes </input><br>
+                <input type="radio" name="BPMeds" value="0"> No </input><br>
+            </fieldset>
+            <fieldset>
+                <label>Ever had a stroke?</label><br>
+                <input type="radio" name="prevalentStroke" value="1"> Yes </input><br>
+                <input type="radio" name="prevalentStroke" value="0"> No </input><br>
+            </fieldset>  
+            <fieldset>
+                <label>Have you been hypertensive?</label><br>
+                <input type="radio" name="prevalentHyp" value="1"> Yes </input><br>
+                <input type="radio" name="prevalentHyp" value="0"> No </input><br>
+            </fieldset>
+            <fieldset>
+                <label>Are you diabetic?</label><br>
+                <input type="radio" name="diabetes" value="1"> Yes </input><br>
+                <input type="radio" name="diabetes" value="0"> No </input><br>
+            </fieldset>
+            <fieldset>
+                <label>What is your total cholesterol level?</label><br>
+                <input name="totChol" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <label>Systolic blood pressure (Upper)</label><br>
+                <input name="sysBP" type="text" tabindex="1" required>
+            </fieldset>
+            <fieldset>
+                <label>Diastolic blood pressure (Lower)</label><br>
+                <input name="diaBP" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <label>Specify your Body Mass Index (BMI)</label><br>
+                <input name="BMI" type="text" tabindex="1" required>
+            </fieldset>       
+            <fieldset>
+                <label>What is your heartbeat per minute?</label><br>
+                <input name="heartRate" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <label>What is your glucose level?</label><br>
+                <input name="glucose"  type="text" tabindex="1" required>
+            </fieldset> 
+            <fieldset>
+                <button type="submit" id="contact-submit" data-submit="...Sending">Predict</button>
+            </fieldset>
+            </form>
+            
+        </div>
+    </body>
+</html>
