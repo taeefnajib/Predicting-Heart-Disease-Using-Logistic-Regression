@@ -1,5 +1,8 @@
 pandas
 numpy
-scikit-learn
 dataclasses_json
+scikit-learn
 psycopg2-binary
+Flask
+gunicorn
+Jinja2
